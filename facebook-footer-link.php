@@ -13,7 +13,15 @@ if(!defined('ABSPATH')){
 }
 
 // Load Scripts
-require_once(plugin_dir_path(__FILE__).'/includes/facebook-footer-link-scripts.php');
+require_once(plugin_dir_path(__FILE__).'includes/facebook-footer-link-scripts.php'); // Calls in scripts file
+
+// Load Content
+require_once(plugin_dir_path(__FILE__).'includes/facebook-footer-link-content.php'); // Calls in content file
+
+if(is_admin()) {
+// Load Settings
+	require_once( plugin_dir_path( __FILE__ ) . 'includes/facebook-footer-link-settings.php' ); // Only included on the admin side
+}
 
 
 
